@@ -1,1 +1,1 @@
-python3 -m unittest -v
+python3.10 -m unittest -v
