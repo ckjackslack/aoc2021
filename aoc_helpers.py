@@ -27,3 +27,5 @@ def get_numbers_from_sliding_window(data, n = 3):
 
 def sum_sublists(main_list):
     return (sum(sublist) for sublist in main_list)
+
+fcommands = lambda: get_lines(get_current_input_file())

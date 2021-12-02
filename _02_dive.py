@@ -1,7 +1,7 @@
 import pyparsing as pp
 from dataclasses import dataclass
 from typing import Tuple, List
-from aoc_helpers import (get_current_input_file, get_lines)
+from aoc_helpers import fcommands
 
 class DebugMixin:
     def _debug(self, *args):
@@ -59,19 +59,9 @@ def calculate_final_position(pos: Position,
 def main():
     pos = Position()
     print(pos)
-    # commands = ['forward 1', 'down 2', 'up 3']
-    fcommands = lambda: get_lines(get_current_input_file())
     pos = calculate_final_position(pos, fcommands())
     print(pos)
     print(pos.get_result())
-
-    commands = ['forward 5', 'down 5', 'forward 8',
-        'up 3', 'down 8', 'forward 2']
-    # e_pos = ExtraPosition(debug = True)
-    e_pos = ExtraPosition()
-    e_pos = calculate_final_position(e_pos, fcommands())
-    print(e_pos)
-    print(e_pos.get_result())
 
 if __name__ == '__main__':
     main()
